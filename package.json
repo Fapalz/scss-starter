@@ -1,0 +1,25 @@
+{
+  "name": "@fapalz/scss-starter",
+  "version": "1.0.0",
+  "description": "Simple scss starter",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fapalz/scss-starter.git"
+  },
+  "keywords": [
+    "scss",
+    "css",
+    "starter",
+    "web",
+    "libary"
+  ],
+  "author": "Gladikov Kirill - Fapalz <blacsesmot@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fapalz/scss-starter/issues"
+  },
+  "homepage": "https://github.com/Fapalz/scss-starter#readme"
+}
