@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Simple scss starter",
   "scripts": {
-    "build": "sass scss/main.scss css/main.css"
+    "build": "sass scss/main.scss css/main.css --no-source-map"
   },
+  "style": "css/main.css",
+  "sass": "scss/main.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Fapalz/scss-starter.git"
@@ -21,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Fapalz/scss-starter/issues"
   },
-  "homepage": "https://github.com/Fapalz/scss-starter#readme"
+  "homepage": "https://github.com/Fapalz/scss-starter#readme",
+  "devDependencies": {
+    "sass": "^1.32.6"
+  }
 }
