@@ -1,6 +1,6 @@
 {
   "name": "@fapalz/scss-starter",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Simple scss starter",
   "scripts": {
     "build": "sass scss/main.scss css/main.css --no-source-map"
