@@ -8,25 +8,33 @@
     $values: zip($values, $values);
   }
 
+  $properties: map-get($utility, property);
+
+  // Multiple properties are possible, for example with vertical or horizontal margins or paddings
+  @if type-of($properties) == "string" {
+    $properties: append((), $properties);
+  }
+
+  // Use custom class if present
+  $property-class: if(map-has-key($utility, class), map-get($utility, class), nth($properties, 1));
+  $property-class: if($property-class == null, "", $property-class);
+
+  // State params to generate pseudo-classes
+  $state: if(map-has-key($utility, state), map-get($utility, state), ());
+
+  $infix: if($property-class == "" and str-slice($infix, 1, 2) == "/@", str-slice($infix, 3), $infix);
+
+  // Don't prefix if value key is null (eg. with shadow class)
+  //$property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
+
+  
+  //$infix: if($infix == "", "", #{'\\@'} + $infix);
+
+
   @each $key, $value in $values {
-    $properties: map-get($utility, property);
-
-    // Multiple properties are possible, for example with vertical or horizontal margins or paddings
-    @if type-of($properties) == "string" {
-      $properties: append((), $properties);
-    }
-
-    // Use custom class if present
-    $property-class: if(map-has-key($utility, class), map-get($utility, class), nth($properties, 1));
-    $property-class: if($property-class == null, "", $property-class);
-
-    // State params to generate pseudo-classes
-    $state: if(map-has-key($utility, state), map-get($utility, state), ());
-
-    $infix: if($property-class == "" and str-slice($infix, 1, 1) == "-", str-slice($infix, 2), $infix);
-
-    // Don't prefix if value key is null (eg. with shadow class)
-    $property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
+    
+    $property-class-modifier: if($key, if($property-class == "", "", "-") + $key, "");
+    
 
     @if map-get($utility, rfs) {
       // Inside the media query
@@ -47,14 +55,14 @@
       @if $is-rtl == false {
         /* rtl:begin:remove */
       }
-      .#{$utilities-prefix + $property-class + $infix + $property-class-modifier} {
+      .#{$utilities-prefix + $property-class + $property-class-modifier + $infix} {
         @each $property in $properties {
           #{$property}: $value if($enable-important-utilities, !important, null);
         }
       }
 
       @each $pseudo in $state {
-        .#{$utilities-prefix + $property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+        .#{$utilities-prefix + $property-class + $property-class-modifier + $infix}-#{$pseudo}:#{$pseudo} {
           @each $property in $properties {
             #{$property}: $value if($enable-important-utilities, !important, null);
           }

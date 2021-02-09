@@ -1,3 +1,26 @@
+// Body
+//
+// 1. Remove the margin in all browsers.
+// 2. As a best practice, apply a default `background-color`.
+// 3. Prevent adjustments of font size after orientation changes in iOS.
+// 4. Change the default tap highlight to be completely transparent in iOS.
+
+body {
+  margin: 0; // 1
+  font-family: $font-family-base;
+  @include font-size($font-size-base);
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: $body-text-align;
+  background-color: $body-bg; // 2
+  -webkit-text-size-adjust: 100%; // 3
+  -webkit-tap-highlight-color: rgba($black, 0); // 4
+}
+
+
+
+
 p,
 ol,
 ul,
@@ -22,6 +45,7 @@ h6 {
   margin: 0;
   padding: 0;
 }
+
 
 // Headings
 h1,
@@ -111,15 +135,84 @@ h6 {
   }
 }
 
+
+// Content grouping
 //
-// Emphasis
-//
-.small {
-  @extend small;
+// 1. Reset Firefox's gray color
+// 2. Set correct height and prevent the `size` attribute to make the `hr` look like an input field
+
+hr {
+  margin: $hr-margin-y 0;
+  color: $hr-color; // 1
+  background-color: currentColor;
+  border: 0;
+  opacity: $hr-opacity;
 }
 
-.mark {
-  @extend mark;
+hr:not([size]) {
+  height: $hr-height; // 2
+}
+
+
+// Strong
+//
+// Add the correct font weight in Chrome, Edge, and Safari
+
+b,
+strong {
+  font-weight: $font-weight-bolder;
+}
+
+
+// Small
+//
+// Add the correct font size in all browsers
+
+small,
+.small {
+  @include font-size($small-font-size);
+}
+
+
+// Sub and Sup
+//
+// Prevent `sub` and `sup` elements from affecting the line height in
+// all browsers.
+
+sub,
+sup {
+  position: relative;
+  @include font-size($sub-sup-font-size);
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub { bottom: -.25em; }
+sup { top: -.5em; }
+
+
+// Code
+
+pre,
+code,
+kbd,
+samp {
+  font-family: $font-family-code;
+  @include font-size(1em); // Correct the odd `em` font sizing in all browsers.
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+// 1. Remove browser default top margin
+
+pre {
+  display: block;
+  overflow: auto; // 1
+}
+
+.mark, mark {
+  padding: $mark-padding;
+  background-color: $mark-bg;
 }
 
 //
@@ -153,29 +246,6 @@ h6 {
   text-transform: uppercase;
 }
 
-// Blockquotes
-.blockquote {
-  margin-bottom: $blockquote-margin-y;
-  @include font-size($blockquote-font-size);
-  background-color: $blockquote-background-color;
-  border-left: $blockquote-border-left;
-  padding: $blockquote-padding;
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
-
-.blockquote-footer {
-  margin-top: -$blockquote-margin-y;
-  margin-bottom: $blockquote-margin-y;
-  @include font-size($blockquote-footer-font-size);
-  color: $blockquote-footer-color;
-
-  &::before {
-    content: "\2014\00A0"; // em dash, nbsp
-  }
-}
 
 .img-fluid {
   @include img-fluid();
@@ -292,7 +362,15 @@ h6 {
   // Blockquote
 
   blockquote {
-    @extend .blockquote;
+    margin-bottom: $blockquote-margin-y;
+    @include font-size($blockquote-font-size);
+    background-color: $blockquote-background-color;
+    border-left: $blockquote-border-left;
+    padding: $blockquote-padding;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 
   
@@ -386,12 +464,5 @@ h6 {
       @include font-size(1em);
       font-weight: $nested-kbd-font-weight;
     }
-  }
-
-  // Mark
-
-  mark {
-    padding: $mark-padding;
-    background-color: $mark-bg;
   }
 }

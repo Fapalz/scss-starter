@@ -13,4 +13,14 @@
   --#{$variable-prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
   --#{$variable-prefix}font-monospace: #{inspect($font-family-monospace)};
   --#{$variable-prefix}gradient: #{$gradient};
+
+  // --#{$variable-prefix}zindex-dropdown: 1000; 
+  // --#{$variable-prefix}zindex-sticky: 1020; 
+  // --#{$variable-prefix}zindex-fixed: 1030; 
+  // --#{$variable-prefix}zindex-modal-backdrop: 1040; 
+  // --#{$variable-prefix}zindex-modal: 1050; 
+  // --#{$variable-prefix}zindex-popover: 1060;
+  // --#{$variable-prefix}zindex-tooltip: 1070;
+  // --#{$variable-prefix}zindex-preloader: 1080;
+
 }

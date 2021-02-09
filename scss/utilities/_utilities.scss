@@ -558,3 +558,119 @@ $utilities: map-merge(
   ),
   $utilities
 );
+
+.#{$utilities-prefix}clearfix {
+  @include clearfix();
+}
+
+
+//
+// Visually hidden
+//
+
+.#{$utilities-prefix}visually-hidden,
+.#{$utilities-prefix}visually-hidden-focusable:not(:focus) {
+  @include visually-hidden();
+}
+
+
+//
+// Text truncation
+//
+
+.#{$utilities-prefix}text-truncate {
+  @include text-truncate();
+}
+
+
+//
+// Stretched link
+//
+
+.#{$utilities-prefix}stretched-link {
+  &::#{$stretched-link-pseudo-element} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $stretched-link-z-index;
+    content: "";
+  }
+}
+
+
+// Credit: Nicolas Gallagher and SUIT CSS.
+
+.#{$utilities-prefix}ratio {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    display: block;
+    padding-top: var(--aspect-ratio);
+    content: "";
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@each $key, $ratio in $aspect-ratios {
+  .#{$utilities-prefix}ratio--#{$key} {
+    --aspect-ratio: #{$ratio};
+  }
+}
+
+
+// Shorthand
+
+.#{$utilities-prefix}fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+.#{$utilities-prefix}fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+// Responsive sticky top
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .#{$utilities-prefix}sticky#{$infix}-top {
+      position: sticky;
+      top: 0;
+      z-index: $zindex-sticky;
+    }
+  }
+}
+
+// Link
+
+@each $color, $value in $theme-colors {
+  .#{$utilities-prefix}link-#{$color} {
+    color: $value;
+
+    @if $link-shade-percentage != 0 {
+      &:hover,
+      &:focus {
+        color: if(color-contrast($value) == $color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage));
+      }
+    }
+  }
+}

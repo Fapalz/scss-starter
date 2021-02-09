@@ -68,25 +68,25 @@
         flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       }
 
-      .row-cols#{$infix}-auto > * {
+      .row-cols-auto#{$infix} > * {
         @include make-col-auto();
       }
 
       @if $grid-row-columns > 0 {
         @for $i from 1 through $grid-row-columns {
-          .row-cols#{$infix}-#{$i} {
+          .row-cols-#{$i}#{$infix} {
             @include row-cols($i);
           }
         }
       }
 
-      .col#{$infix}-auto {
+      .col-auto#{$infix} {
         @include make-col-auto();
       }
 
       @if $columns > 0 {
         @for $i from 1 through $columns {
-          .col#{$infix}-#{$i} {
+          .col-#{$i}#{$infix} {
             @include make-col($i, $columns);
           }
         }
@@ -94,7 +94,7 @@
         // `$columns - 1` because offsetting by the width of an entire row isn't possible
         @for $i from 0 through ($columns - 1) {
           @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
-            .offset#{$infix}-#{$i} {
+            .offset-#{$i}#{$infix} {
               @include make-col-offset($i, $columns);
             }
           }
@@ -105,13 +105,13 @@
       //
       // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
       @each $key, $value in $gutters {
-        .g#{$infix}-#{$key},
-        .gx#{$infix}-#{$key} {
+        .g-#{$key}#{$infix},
+        .gx-#{$key}#{$infix} {
           --#{$variable-prefix}gutter-x: #{$value};
         }
 
-        .g#{$infix}-#{$key},
-        .gy#{$infix}-#{$key} {
+        .g-#{$key}#{$infix},
+        .gy-#{$key}#{$infix} {
           --#{$variable-prefix}gutter-y: #{$value};
         }
       }
