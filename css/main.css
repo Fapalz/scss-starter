@@ -683,37 +683,37 @@ a > .content code {
   flex: 1 0 0%;
 }
 
-.row-cols-auto > * {
+.row--cols-auto > * {
   flex: 0 0 auto;
   width: auto;
 }
 
-.row-cols-1 > * {
+.row--cols-1 > * {
   flex: 0 0 auto;
   width: 100%;
 }
 
-.row-cols-2 > * {
+.row--cols-2 > * {
   flex: 0 0 auto;
   width: 50%;
 }
 
-.row-cols-3 > * {
+.row--cols-3 > * {
   flex: 0 0 auto;
   width: 33.3333333333%;
 }
 
-.row-cols-4 > * {
+.row--cols-4 > * {
   flex: 0 0 auto;
   width: 25%;
 }
 
-.row-cols-5 > * {
+.row--cols-5 > * {
   flex: 0 0 auto;
   width: 20%;
 }
 
-.row-cols-6 > * {
+.row--cols-6 > * {
   flex: 0 0 auto;
   width: 16.6666666667%;
 }
@@ -827,63 +827,63 @@ a > .content code {
   margin-left: 91.6666666667%;
 }
 
-.g-0,
-.gx-0 {
+.gap-0,
+.gap-x-0 {
   --v-gutter-x: 0;
 }
 
-.g-0,
-.gy-0 {
+.gap-0,
+.gap-y-0 {
   --v-gutter-y: 0;
 }
 
-.g-1,
-.gx-1 {
+.gap-1,
+.gap-x-1 {
   --v-gutter-x: 0.25rem;
 }
 
-.g-1,
-.gy-1 {
+.gap-1,
+.gap-y-1 {
   --v-gutter-y: 0.25rem;
 }
 
-.g-2,
-.gx-2 {
+.gap-2,
+.gap-x-2 {
   --v-gutter-x: 0.5rem;
 }
 
-.g-2,
-.gy-2 {
+.gap-2,
+.gap-y-2 {
   --v-gutter-y: 0.5rem;
 }
 
-.g-3,
-.gx-3 {
+.gap-3,
+.gap-x-3 {
   --v-gutter-x: 1rem;
 }
 
-.g-3,
-.gy-3 {
+.gap-3,
+.gap-y-3 {
   --v-gutter-y: 1rem;
 }
 
-.g-4,
-.gx-4 {
+.gap-4,
+.gap-x-4 {
   --v-gutter-x: 1.5rem;
 }
 
-.g-4,
-.gy-4 {
+.gap-4,
+.gap-y-4 {
   --v-gutter-y: 1.5rem;
 }
 
-.g-5,
-.gx-5 {
+.gap-5,
+.gap-x-5 {
   --v-gutter-x: 3rem;
 }
 
-.g-5,
-.gy-5 {
+.gap-5,
+.gap-y-5 {
   --v-gutter-y: 3rem;
 }
 
@@ -892,37 +892,37 @@ a > .content code {
     flex: 1 0 0%;
   }
 
-  .row-cols-auto\@sm > * {
+  .row--cols-auto\@sm > * {
     flex: 0 0 auto;
     width: auto;
   }
 
-  .row-cols-1\@sm > * {
+  .row--cols-1\@sm > * {
     flex: 0 0 auto;
     width: 100%;
   }
 
-  .row-cols-2\@sm > * {
+  .row--cols-2\@sm > * {
     flex: 0 0 auto;
     width: 50%;
   }
 
-  .row-cols-3\@sm > * {
+  .row--cols-3\@sm > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
-  .row-cols-4\@sm > * {
+  .row--cols-4\@sm > * {
     flex: 0 0 auto;
     width: 25%;
   }
 
-  .row-cols-5\@sm > * {
+  .row--cols-5\@sm > * {
     flex: 0 0 auto;
     width: 20%;
   }
 
-  .row-cols-6\@sm > * {
+  .row--cols-6\@sm > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -1040,63 +1040,63 @@ a > .content code {
     margin-left: 91.6666666667%;
   }
 
-  .g-0\@sm,
-.gx-0\@sm {
+  .gap-0\@sm,
+.gap-x-0\@sm {
     --v-gutter-x: 0;
   }
 
-  .g-0\@sm,
-.gy-0\@sm {
+  .gap-0\@sm,
+.gap-y-0\@sm {
     --v-gutter-y: 0;
   }
 
-  .g-1\@sm,
-.gx-1\@sm {
+  .gap-1\@sm,
+.gap-x-1\@sm {
     --v-gutter-x: 0.25rem;
   }
 
-  .g-1\@sm,
-.gy-1\@sm {
+  .gap-1\@sm,
+.gap-y-1\@sm {
     --v-gutter-y: 0.25rem;
   }
 
-  .g-2\@sm,
-.gx-2\@sm {
+  .gap-2\@sm,
+.gap-x-2\@sm {
     --v-gutter-x: 0.5rem;
   }
 
-  .g-2\@sm,
-.gy-2\@sm {
+  .gap-2\@sm,
+.gap-y-2\@sm {
     --v-gutter-y: 0.5rem;
   }
 
-  .g-3\@sm,
-.gx-3\@sm {
+  .gap-3\@sm,
+.gap-x-3\@sm {
     --v-gutter-x: 1rem;
   }
 
-  .g-3\@sm,
-.gy-3\@sm {
+  .gap-3\@sm,
+.gap-y-3\@sm {
     --v-gutter-y: 1rem;
   }
 
-  .g-4\@sm,
-.gx-4\@sm {
+  .gap-4\@sm,
+.gap-x-4\@sm {
     --v-gutter-x: 1.5rem;
   }
 
-  .g-4\@sm,
-.gy-4\@sm {
+  .gap-4\@sm,
+.gap-y-4\@sm {
     --v-gutter-y: 1.5rem;
   }
 
-  .g-5\@sm,
-.gx-5\@sm {
+  .gap-5\@sm,
+.gap-x-5\@sm {
     --v-gutter-x: 3rem;
   }
 
-  .g-5\@sm,
-.gy-5\@sm {
+  .gap-5\@sm,
+.gap-y-5\@sm {
     --v-gutter-y: 3rem;
   }
 }
@@ -1105,37 +1105,37 @@ a > .content code {
     flex: 1 0 0%;
   }
 
-  .row-cols-auto\@md > * {
+  .row--cols-auto\@md > * {
     flex: 0 0 auto;
     width: auto;
   }
 
-  .row-cols-1\@md > * {
+  .row--cols-1\@md > * {
     flex: 0 0 auto;
     width: 100%;
   }
 
-  .row-cols-2\@md > * {
+  .row--cols-2\@md > * {
     flex: 0 0 auto;
     width: 50%;
   }
 
-  .row-cols-3\@md > * {
+  .row--cols-3\@md > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
-  .row-cols-4\@md > * {
+  .row--cols-4\@md > * {
     flex: 0 0 auto;
     width: 25%;
   }
 
-  .row-cols-5\@md > * {
+  .row--cols-5\@md > * {
     flex: 0 0 auto;
     width: 20%;
   }
 
-  .row-cols-6\@md > * {
+  .row--cols-6\@md > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -1253,63 +1253,63 @@ a > .content code {
     margin-left: 91.6666666667%;
   }
 
-  .g-0\@md,
-.gx-0\@md {
+  .gap-0\@md,
+.gap-x-0\@md {
     --v-gutter-x: 0;
   }
 
-  .g-0\@md,
-.gy-0\@md {
+  .gap-0\@md,
+.gap-y-0\@md {
     --v-gutter-y: 0;
   }
 
-  .g-1\@md,
-.gx-1\@md {
+  .gap-1\@md,
+.gap-x-1\@md {
     --v-gutter-x: 0.25rem;
   }
 
-  .g-1\@md,
-.gy-1\@md {
+  .gap-1\@md,
+.gap-y-1\@md {
     --v-gutter-y: 0.25rem;
   }
 
-  .g-2\@md,
-.gx-2\@md {
+  .gap-2\@md,
+.gap-x-2\@md {
     --v-gutter-x: 0.5rem;
   }
 
-  .g-2\@md,
-.gy-2\@md {
+  .gap-2\@md,
+.gap-y-2\@md {
     --v-gutter-y: 0.5rem;
   }
 
-  .g-3\@md,
-.gx-3\@md {
+  .gap-3\@md,
+.gap-x-3\@md {
     --v-gutter-x: 1rem;
   }
 
-  .g-3\@md,
-.gy-3\@md {
+  .gap-3\@md,
+.gap-y-3\@md {
     --v-gutter-y: 1rem;
   }
 
-  .g-4\@md,
-.gx-4\@md {
+  .gap-4\@md,
+.gap-x-4\@md {
     --v-gutter-x: 1.5rem;
   }
 
-  .g-4\@md,
-.gy-4\@md {
+  .gap-4\@md,
+.gap-y-4\@md {
     --v-gutter-y: 1.5rem;
   }
 
-  .g-5\@md,
-.gx-5\@md {
+  .gap-5\@md,
+.gap-x-5\@md {
     --v-gutter-x: 3rem;
   }
 
-  .g-5\@md,
-.gy-5\@md {
+  .gap-5\@md,
+.gap-y-5\@md {
     --v-gutter-y: 3rem;
   }
 }
@@ -1318,37 +1318,37 @@ a > .content code {
     flex: 1 0 0%;
   }
 
-  .row-cols-auto\@lg > * {
+  .row--cols-auto\@lg > * {
     flex: 0 0 auto;
     width: auto;
   }
 
-  .row-cols-1\@lg > * {
+  .row--cols-1\@lg > * {
     flex: 0 0 auto;
     width: 100%;
   }
 
-  .row-cols-2\@lg > * {
+  .row--cols-2\@lg > * {
     flex: 0 0 auto;
     width: 50%;
   }
 
-  .row-cols-3\@lg > * {
+  .row--cols-3\@lg > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
-  .row-cols-4\@lg > * {
+  .row--cols-4\@lg > * {
     flex: 0 0 auto;
     width: 25%;
   }
 
-  .row-cols-5\@lg > * {
+  .row--cols-5\@lg > * {
     flex: 0 0 auto;
     width: 20%;
   }
 
-  .row-cols-6\@lg > * {
+  .row--cols-6\@lg > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -1466,63 +1466,63 @@ a > .content code {
     margin-left: 91.6666666667%;
   }
 
-  .g-0\@lg,
-.gx-0\@lg {
+  .gap-0\@lg,
+.gap-x-0\@lg {
     --v-gutter-x: 0;
   }
 
-  .g-0\@lg,
-.gy-0\@lg {
+  .gap-0\@lg,
+.gap-y-0\@lg {
     --v-gutter-y: 0;
   }
 
-  .g-1\@lg,
-.gx-1\@lg {
+  .gap-1\@lg,
+.gap-x-1\@lg {
     --v-gutter-x: 0.25rem;
   }
 
-  .g-1\@lg,
-.gy-1\@lg {
+  .gap-1\@lg,
+.gap-y-1\@lg {
     --v-gutter-y: 0.25rem;
   }
 
-  .g-2\@lg,
-.gx-2\@lg {
+  .gap-2\@lg,
+.gap-x-2\@lg {
     --v-gutter-x: 0.5rem;
   }
 
-  .g-2\@lg,
-.gy-2\@lg {
+  .gap-2\@lg,
+.gap-y-2\@lg {
     --v-gutter-y: 0.5rem;
   }
 
-  .g-3\@lg,
-.gx-3\@lg {
+  .gap-3\@lg,
+.gap-x-3\@lg {
     --v-gutter-x: 1rem;
   }
 
-  .g-3\@lg,
-.gy-3\@lg {
+  .gap-3\@lg,
+.gap-y-3\@lg {
     --v-gutter-y: 1rem;
   }
 
-  .g-4\@lg,
-.gx-4\@lg {
+  .gap-4\@lg,
+.gap-x-4\@lg {
     --v-gutter-x: 1.5rem;
   }
 
-  .g-4\@lg,
-.gy-4\@lg {
+  .gap-4\@lg,
+.gap-y-4\@lg {
     --v-gutter-y: 1.5rem;
   }
 
-  .g-5\@lg,
-.gx-5\@lg {
+  .gap-5\@lg,
+.gap-x-5\@lg {
     --v-gutter-x: 3rem;
   }
 
-  .g-5\@lg,
-.gy-5\@lg {
+  .gap-5\@lg,
+.gap-y-5\@lg {
     --v-gutter-y: 3rem;
   }
 }
@@ -1531,37 +1531,37 @@ a > .content code {
     flex: 1 0 0%;
   }
 
-  .row-cols-auto\@xl > * {
+  .row--cols-auto\@xl > * {
     flex: 0 0 auto;
     width: auto;
   }
 
-  .row-cols-1\@xl > * {
+  .row--cols-1\@xl > * {
     flex: 0 0 auto;
     width: 100%;
   }
 
-  .row-cols-2\@xl > * {
+  .row--cols-2\@xl > * {
     flex: 0 0 auto;
     width: 50%;
   }
 
-  .row-cols-3\@xl > * {
+  .row--cols-3\@xl > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
-  .row-cols-4\@xl > * {
+  .row--cols-4\@xl > * {
     flex: 0 0 auto;
     width: 25%;
   }
 
-  .row-cols-5\@xl > * {
+  .row--cols-5\@xl > * {
     flex: 0 0 auto;
     width: 20%;
   }
 
-  .row-cols-6\@xl > * {
+  .row--cols-6\@xl > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -1679,63 +1679,63 @@ a > .content code {
     margin-left: 91.6666666667%;
   }
 
-  .g-0\@xl,
-.gx-0\@xl {
+  .gap-0\@xl,
+.gap-x-0\@xl {
     --v-gutter-x: 0;
   }
 
-  .g-0\@xl,
-.gy-0\@xl {
+  .gap-0\@xl,
+.gap-y-0\@xl {
     --v-gutter-y: 0;
   }
 
-  .g-1\@xl,
-.gx-1\@xl {
+  .gap-1\@xl,
+.gap-x-1\@xl {
     --v-gutter-x: 0.25rem;
   }
 
-  .g-1\@xl,
-.gy-1\@xl {
+  .gap-1\@xl,
+.gap-y-1\@xl {
     --v-gutter-y: 0.25rem;
   }
 
-  .g-2\@xl,
-.gx-2\@xl {
+  .gap-2\@xl,
+.gap-x-2\@xl {
     --v-gutter-x: 0.5rem;
   }
 
-  .g-2\@xl,
-.gy-2\@xl {
+  .gap-2\@xl,
+.gap-y-2\@xl {
     --v-gutter-y: 0.5rem;
   }
 
-  .g-3\@xl,
-.gx-3\@xl {
+  .gap-3\@xl,
+.gap-x-3\@xl {
     --v-gutter-x: 1rem;
   }
 
-  .g-3\@xl,
-.gy-3\@xl {
+  .gap-3\@xl,
+.gap-y-3\@xl {
     --v-gutter-y: 1rem;
   }
 
-  .g-4\@xl,
-.gx-4\@xl {
+  .gap-4\@xl,
+.gap-x-4\@xl {
     --v-gutter-x: 1.5rem;
   }
 
-  .g-4\@xl,
-.gy-4\@xl {
+  .gap-4\@xl,
+.gap-y-4\@xl {
     --v-gutter-y: 1.5rem;
   }
 
-  .g-5\@xl,
-.gx-5\@xl {
+  .gap-5\@xl,
+.gap-x-5\@xl {
     --v-gutter-x: 3rem;
   }
 
-  .g-5\@xl,
-.gy-5\@xl {
+  .gap-5\@xl,
+.gap-y-5\@xl {
     --v-gutter-y: 3rem;
   }
 }
@@ -1744,37 +1744,37 @@ a > .content code {
     flex: 1 0 0%;
   }
 
-  .row-cols-auto\@xxl > * {
+  .row--cols-auto\@xxl > * {
     flex: 0 0 auto;
     width: auto;
   }
 
-  .row-cols-1\@xxl > * {
+  .row--cols-1\@xxl > * {
     flex: 0 0 auto;
     width: 100%;
   }
 
-  .row-cols-2\@xxl > * {
+  .row--cols-2\@xxl > * {
     flex: 0 0 auto;
     width: 50%;
   }
 
-  .row-cols-3\@xxl > * {
+  .row--cols-3\@xxl > * {
     flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
-  .row-cols-4\@xxl > * {
+  .row--cols-4\@xxl > * {
     flex: 0 0 auto;
     width: 25%;
   }
 
-  .row-cols-5\@xxl > * {
+  .row--cols-5\@xxl > * {
     flex: 0 0 auto;
     width: 20%;
   }
 
-  .row-cols-6\@xxl > * {
+  .row--cols-6\@xxl > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
@@ -1892,63 +1892,63 @@ a > .content code {
     margin-left: 91.6666666667%;
   }
 
-  .g-0\@xxl,
-.gx-0\@xxl {
+  .gap-0\@xxl,
+.gap-x-0\@xxl {
     --v-gutter-x: 0;
   }
 
-  .g-0\@xxl,
-.gy-0\@xxl {
+  .gap-0\@xxl,
+.gap-y-0\@xxl {
     --v-gutter-y: 0;
   }
 
-  .g-1\@xxl,
-.gx-1\@xxl {
+  .gap-1\@xxl,
+.gap-x-1\@xxl {
     --v-gutter-x: 0.25rem;
   }
 
-  .g-1\@xxl,
-.gy-1\@xxl {
+  .gap-1\@xxl,
+.gap-y-1\@xxl {
     --v-gutter-y: 0.25rem;
   }
 
-  .g-2\@xxl,
-.gx-2\@xxl {
+  .gap-2\@xxl,
+.gap-x-2\@xxl {
     --v-gutter-x: 0.5rem;
   }
 
-  .g-2\@xxl,
-.gy-2\@xxl {
+  .gap-2\@xxl,
+.gap-y-2\@xxl {
     --v-gutter-y: 0.5rem;
   }
 
-  .g-3\@xxl,
-.gx-3\@xxl {
+  .gap-3\@xxl,
+.gap-x-3\@xxl {
     --v-gutter-x: 1rem;
   }
 
-  .g-3\@xxl,
-.gy-3\@xxl {
+  .gap-3\@xxl,
+.gap-y-3\@xxl {
     --v-gutter-y: 1rem;
   }
 
-  .g-4\@xxl,
-.gx-4\@xxl {
+  .gap-4\@xxl,
+.gap-x-4\@xxl {
     --v-gutter-x: 1.5rem;
   }
 
-  .g-4\@xxl,
-.gy-4\@xxl {
+  .gap-4\@xxl,
+.gap-y-4\@xxl {
     --v-gutter-y: 1.5rem;
   }
 
-  .g-5\@xxl,
-.gx-5\@xxl {
+  .gap-5\@xxl,
+.gap-x-5\@xxl {
     --v-gutter-x: 3rem;
   }
 
-  .g-5\@xxl,
-.gy-5\@xxl {
+  .gap-5\@xxl,
+.gap-y-5\@xxl {
     --v-gutter-y: 3rem;
   }
 }
@@ -2032,16 +2032,16 @@ a > .content code {
   content: "";
 }
 
-.u-ratio {
+.u-aspect-ratio {
   position: relative;
   width: 100%;
 }
-.u-ratio::before {
+.u-aspect-ratio::before {
   display: block;
   padding-top: var(--aspect-ratio);
   content: "";
 }
-.u-ratio > * {
+.u-aspect-ratio > * {
   position: absolute;
   top: 0;
   left: 0;
@@ -2050,19 +2050,19 @@ a > .content code {
   object-fit: cover;
 }
 
-.u-ratio--1x1 {
+.u-aspect-ratio--1\:1 {
   --aspect-ratio: 100%;
 }
 
-.u-ratio--4x3 {
+.u-aspect-ratio--4\:3 {
   --aspect-ratio: calc(3 / 4 * 100%);
 }
 
-.u-ratio--16x9 {
+.u-aspect-ratio--16\:9 {
   --aspect-ratio: calc(9 / 16 * 100%);
 }
 
-.u-ratio--21x9 {
+.u-aspect-ratio--21\:9 {
   --aspect-ratio: calc(9 / 21 * 100%);
 }
 
