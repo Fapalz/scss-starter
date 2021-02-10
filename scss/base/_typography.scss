@@ -47,16 +47,7 @@ h6 {
 }
 
 
-// Headings
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
+
 
 //
 // Headings
@@ -71,69 +62,16 @@ h6 {
 }
 
 
-.h1 {
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @extend %heading;
-  @include font-size($h1-font-size);
-  margin-bottom: 0.5em;
-
-  &:not(:first-child) {
-    margin-top: 1em;
-  }
 }
 
-.h2 {
-  @extend %heading;
-  @include font-size($h2-font-size);
-  margin-bottom: 0.5714em;
-
-  &:not(:first-child) {
-    margin-top: 1.1428em;
-  }
-}
-
-.h3 {
-  @extend %heading;
-  @include font-size($h3-font-size);
-  margin-bottom: 0.6666em;
-
-  &:not(:first-child) {
-    margin-top: 1.3333em;
-  }
-}
-
-.h4 {
-  @extend %heading;
-  @include font-size($h4-font-size);
-  margin-bottom: 0.8em;
-}
-
-.h5 {
-  @extend %heading;
-  @include font-size($h5-font-size);
-  margin-bottom: 0.8888em;
-}
-
-.h6 {
-  @extend %heading;
-  @include font-size($h6-font-size);
-  margin-bottom: 1em
-}
-
-
-
-.lead {
-  @include font-size($lead-font-size);
-  font-weight: $lead-font-weight;
-}
-
-// Type display classes
-@each $display, $font-size in $display-font-sizes {
-  .display-#{$display} {
-    @include font-size($font-size);
-    font-weight: $display-font-weight;
-    line-height: $display-line-height;
-  }
-}
 
 
 // Content grouping
@@ -168,8 +106,7 @@ strong {
 //
 // Add the correct font size in all browsers
 
-small,
-.small {
+small {
   @include font-size($small-font-size);
 }
 
@@ -210,46 +147,11 @@ pre {
   overflow: auto; // 1
 }
 
-.mark, mark {
+mark {
   padding: $mark-padding;
   background-color: $mark-bg;
 }
 
-//
-// Lists
-//
-
-.list-unstyled {
-  @include list-unstyled();
-}
-
-// Inline turns list items into inline-block
-.list-inline {
-  @include list-unstyled();
-}
-.list-inline-item {
-  display: inline-block;
-
-  &:not(:last-child) {
-    margin-right: $list-inline-padding;
-  }
-}
-
-
-//
-// Misc
-//
-
-// Builds on `abbr`
-.initialism {
-  @include font-size($initialism-font-size);
-  text-transform: uppercase;
-}
-
-
-.img-fluid {
-  @include img-fluid();
-}
 
 .#{$class-content-wrapper} {
   // Typography
@@ -262,32 +164,50 @@ pre {
   pre,
   table {
     &:not(:last-child) {
-      margin-bottom: 1em;
+      margin-bottom: $paragraph-margin-bottom;
     }
   }
 
   h1 {
-    @extend .h1;
+    @include font-size($h1-font-size);
+    margin-bottom: 0.5em;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
   }
 
   h2 {
-    @extend .h2;
+    @include font-size($h2-font-size);
+    margin-bottom: 0.5714em;
+
+    &:not(:first-child) {
+      margin-top: 1.1428em;
+    }
   }
 
   h3 {
-    @extend .h3;
+    @include font-size($h3-font-size);
+    margin-bottom: 0.6666em;
+
+    &:not(:first-child) {
+      margin-top: 1.3333em;
+    }
   }
 
   h4 {
-    @extend .h4;
+    @include font-size($h4-font-size);
+    margin-bottom: 0.8em;
   }
 
   h5 {
-    @extend .h5;
+    @include font-size($h5-font-size);
+    margin-bottom: 0.8888em;
   }
 
   h6 {
-    @extend .h6;
+    @include font-size($h6-font-size);
+    margin-bottom: 1em
   }
 
 
@@ -299,7 +219,7 @@ pre {
 
   ol,
   ul {
-    margin-top: 1em;
+    margin-top: $paragraph-margin-bottom;
     padding-left: 2em;
   }
 
@@ -345,7 +265,7 @@ pre {
   }
 
   li + li {
-    margin-bottom: 0.25em;
+    margin-top: 0.375em;
   }
 
   dt {

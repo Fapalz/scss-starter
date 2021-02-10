@@ -662,8 +662,18 @@ $utilities: map-merge(
 
 // Link
 
+.#{$utilities-prefix}link {
+  color: $link-color;
+    text-decoration: $link-decoration;
+
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+}
+
 @each $color, $value in $theme-colors {
-  .#{$utilities-prefix}link-#{$color} {
+  .#{$utilities-prefix}link--#{$color} {
     color: $value;
 
     @if $link-shade-percentage != 0 {
@@ -673,4 +683,105 @@ $utilities: map-merge(
       }
     }
   }
+}
+
+
+%heading {
+  font-family: $headings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+.#{$utilities-prefix}h1 {
+  @extend %heading;
+  @include font-size($h1-font-size);
+}
+
+.#{$utilities-prefix}h2 {
+  @extend %heading;
+  @include font-size($h2-font-size);
+}
+
+.#{$utilities-prefix}h3 {
+  @extend %heading;
+  @include font-size($h3-font-size);
+}
+
+.#{$utilities-prefix}h4 {
+  @extend %heading;
+  @include font-size($h4-font-size);
+}
+
+.#{$utilities-prefix}h5 {
+  @extend %heading;
+  @include font-size($h5-font-size);
+}
+
+.#{$utilities-prefix}h6 {
+  @extend %heading;
+  @include font-size($h6-font-size);
+}
+
+
+
+.#{$utilities-prefix}lead {
+  @include font-size($lead-font-size);
+  font-weight: $lead-font-weight;
+}
+
+// Type display classes
+@each $display, $font-size in $display-font-sizes {
+  .#{$utilities-prefix}display-#{$display} {
+    @include font-size($font-size);
+    font-weight: $display-font-weight;
+    line-height: $display-line-height;
+  }
+}
+
+.#{$utilities-prefix}small {
+  @include font-size($small-font-size);
+}
+
+.#{$utilities-prefix}mark {
+  padding: $mark-padding;
+  background-color: $mark-bg;
+}
+
+//
+// Lists
+//
+
+.#{$utilities-prefix}list-unstyled {
+  @include list-unstyled();
+}
+
+// Inline turns list items into inline-block
+.#{$utilities-prefix}list-inline {
+  @include list-unstyled();
+}
+
+.#{$utilities-prefix}list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
+}
+
+
+//
+// Misc
+//
+
+// Builds on `abbr`
+.#{$utilities-prefix}initialism {
+  @include font-size($initialism-font-size);
+  text-transform: uppercase;
+}
+
+
+.#{$utilities-prefix}img-fluid {
+  @include img-fluid();
 }
