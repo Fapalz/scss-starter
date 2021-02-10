@@ -68,13 +68,13 @@
         flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       }
 
-      .row-cols-auto#{$infix} > * {
+      .row--cols-auto#{$infix} > * {
         @include make-col-auto();
       }
 
       @if $grid-row-columns > 0 {
         @for $i from 1 through $grid-row-columns {
-          .row-cols-#{$i}#{$infix} {
+          .row--cols-#{$i}#{$infix} {
             @include row-cols($i);
           }
         }
@@ -105,13 +105,13 @@
       //
       // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
       @each $key, $value in $gutters {
-        .g-#{$key}#{$infix},
-        .gx-#{$key}#{$infix} {
+        .gap-#{$key}#{$infix},
+        .gap-x-#{$key}#{$infix} {
           --#{$variable-prefix}gutter-x: #{$value};
         }
 
-        .g-#{$key}#{$infix},
-        .gy-#{$key}#{$infix} {
+        .gap-#{$key}#{$infix},
+        .gap-y-#{$key}#{$infix} {
           --#{$variable-prefix}gutter-y: #{$value};
         }
       }

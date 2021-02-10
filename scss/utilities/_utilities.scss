@@ -602,7 +602,7 @@ $utilities: map-merge(
 
 // Credit: Nicolas Gallagher and SUIT CSS.
 
-.#{$utilities-prefix}ratio {
+.#{$utilities-prefix}aspect-ratio {
   position: relative;
   width: 100%;
 
@@ -623,7 +623,7 @@ $utilities: map-merge(
 }
 
 @each $key, $ratio in $aspect-ratios {
-  .#{$utilities-prefix}ratio--#{$key} {
+  .#{$utilities-prefix}aspect-ratio--#{$key} {
     --aspect-ratio: #{$ratio};
   }
 }
