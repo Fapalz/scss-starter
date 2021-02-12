@@ -160,6 +160,11 @@ $utilities: map-merge(
       class: mh,
       values: (100: 100%)
     ),
+    "min-height": (
+      property: min-height,
+      class: minh,
+      values: (100: 100%)
+    ),
     "viewport-height": (
       property: height,
       class: vh,
@@ -652,7 +657,7 @@ $utilities: map-merge(
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .#{$utilities-prefix}sticky#{$infix}-top {
+    .#{$utilities-prefix}sticky-top#{$infix} {
       position: sticky;
       top: 0;
       z-index: $zindex-sticky;

@@ -1,0 +1,29 @@
+$spacer: 1rem !default;
+
+// $spacers: (
+//   0: 0,
+//   1: $spacer / 4,
+//   2: $spacer / 2,
+//   3: $spacer,
+//   4: $spacer * 1.5,
+//   5: $spacer * 3,
+// ) !default;
+
+$spacers: (
+  "0": 0,
+  "1": var(--#{$variable-prefix}space-unit),
+  "4xs": calc(0.125 * var(--#{$variable-prefix}space-unit)),
+  "3xs": calc(0.25 * var(--#{$variable-prefix}space-unit)),
+  "2xs": calc(0.375 * var(--#{$variable-prefix}space-unit)),
+  "xs":  calc(0.5 * var(--#{$variable-prefix}space-unit)),
+  "sm":  calc(0.75 * var(--#{$variable-prefix}space-unit)),
+  "md":  calc(1.25 * var(--#{$variable-prefix}space-unit)),
+  "lg":  calc(2 * var(--#{$variable-prefix}space-unit)),
+  "xl":  calc(3.25 * var(--#{$variable-prefix}space-unit)),
+  "2xl": calc(5.25 * var(--#{$variable-prefix}space-unit)),
+  "3xl": calc(8.5 * var(--#{$variable-prefix}space-unit)),
+  "4xl": calc(13.75 * var(--#{$variable-prefix}space-unit)),
+  "component": var(--#{$variable-prefix}space-md),
+) !default;
+
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
