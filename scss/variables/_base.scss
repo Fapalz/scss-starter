@@ -3,42 +3,44 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-
 // fusv-enable
-
 
 // Options
 //
-// Quickly modify global styling by enabling or disabling optional features.
+// Quickly modify global styling by enabling or disabling optional features
 
-$enable-caret:                true !default;
-$enable-rounded:              true !default;
-$enable-shadows:              false !default;
-$enable-gradients:            false !default;
-$enable-transitions:          true !default;
-$enable-reduced-motion:       true !default;
-$enable-smooth-scroll:        true !default;
-$enable-grid-classes:         true !default;
-$enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
-$enable-validation-icons:     true !default;
-$enable-negative-margins:     true !default;
+$enable-caret: true !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+$enable-reduced-motion: true !default;
+$enable-smooth-scroll: true !default;
+$enable-grid-classes: true !default;
+$enable-button-pointers: true !default;
+$enable-rfs: true !default;
+$enable-validation-icons: true !default;
+$enable-negative-margins: true !default;
 $enable-deprecation-messages: true !default;
-$enable-important-utilities:  true !default;
+$enable-important-utilities: true !default;
 
 // Prefix for :root CSS variables
-$variable-prefix:             v- !default;
+$variable-prefix: v- !default;
 
 // Prefix for CSS classes
-$utilities-prefix:            u- !default;
+$utilities-prefix: u- !default;
 
-$class-content-wrapper:       text-content !default;
+$class-content-wrapper: content-box !default;
 
 // Gradient
 //
 // The gradient which is added to components if `$enable-gradients` is `true`
 // This gradient is also added to elements with `.bg-gradient`
-$gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
+$gradient: linear-gradient(
+  180deg,
+  rgba($white, 0.15),
+  rgba($white, 0)
+) !default;
 
 // Spacing
 //
@@ -46,32 +48,27 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-
-
 // Z-index master list
 //
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 
 // scss-docs-start zindex-stack
-$zindex-dropdown:                   1000 !default;
-$zindex-sticky:                     1020 !default;
-$zindex-fixed:                      1030 !default;
-$zindex-modal-backdrop:             1040 !default;
-$zindex-modal:                      1050 !default;
-$zindex-popover:                    1060 !default;
-$zindex-tooltip:                    1070 !default;
-$zindex-preloader:                  1080 !default;
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+$zindex-preloader: 1080 !default;
 // scss-docs-end zindex-stack
-
-
-
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
-  ("<", "%3c"),
-  (">", "%3e"),
-  ("#", "%23"),
-  ("(", "%28"),
-  (")", "%29"),
+  ('<', '%3c'),
+  ('>', '%3e'),
+  ('#', '%23'),
+  ('(', '%28'),
+  (')', '%29')
 ) !default;

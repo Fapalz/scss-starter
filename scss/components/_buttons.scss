@@ -1,5 +1,9 @@
-@if variable-exists('cody-base-partials') == false or index($cody-base-partials, 'buttons') {
-  .btn { // basic button style
+@if variable-exists('cody-base-partials') ==
+  false or
+  index($cody-base-partials, 'buttons')
+{
+  .btn {
+    // basic button style
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -10,7 +14,7 @@
     padding-left: var(--btn-padding-x, 0.75em);
     padding-right: var(--btn-padding-x, 0.75em);
     font-size: var(--btn-font-size, 1em);
-    line-height: var(--btn-line-height, 1.5);;
+    line-height: var(--btn-line-height, 1.5);
     white-space: nowrap;
     background-image: none;
     background-color: transparent;
@@ -19,8 +23,13 @@
   }
 
   // default size variations
-  .btn--sm { font-size: var(--btn-font-size-sm, 0.8em); }
-  .btn--md { font-size: var(--btn-font-size-md, 1.2em); }
-  .btn--lg { font-size: var(--btn-font-size-lg, 1.4em); }
-
+  .btn--sm {
+    font-size: var(--btn-font-size-sm, 0.8em);
+  }
+  .btn--md {
+    font-size: var(--btn-font-size-md, 1.2em);
+  }
+  .btn--lg {
+    font-size: var(--btn-font-size-lg, 1.4em);
+  }
 }

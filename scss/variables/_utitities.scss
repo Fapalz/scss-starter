@@ -5,23 +5,21 @@
 $position-values: (
   0: 0,
   50: 50%,
-  100: 100%
+  100: 100%,
 ) !default;
-
 
 // stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
 $aspect-ratios: (
-  "1\\:1": 100%,
-  "4\\:3": calc(3 / 4 * 100%),
-  "16\\:9": calc(9 / 16 * 100%),
-  "21\\:9": calc(9 / 21 * 100%)
+  '1\\:1': 100%,
+  '4\\:3': calc(3 / 4 * 100%),
+  '16\\:9': calc(9 / 16 * 100%),
+  '21\\:9': calc(9 / 21 * 100%),
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
 
-
-$text-muted:                  $gray-600 !default;
+$text-muted: $gray-600 !default;
 
 $border-widths: (
   0: 0,
@@ -29,9 +27,8 @@ $border-widths: (
   2: 2px,
   3: 3px,
   4: 4px,
-  5: 5px
+  5: 5px,
 ) !default;
-
 
 // scss-docs-start display-headings
 $display-font-sizes: (
@@ -40,16 +37,16 @@ $display-font-sizes: (
   3: 4rem,
   4: 3.5rem,
   5: 3rem,
-  6: 2.5rem
+  6: 2.5rem,
 ) !default;
 
 $display-font-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-weight: 300 !default;
 
-$initialism-font-size:        $small-font-size !default;
+$initialism-font-size: $small-font-size !default;
 
-$list-inline-padding:         .5em !default;
+$list-inline-padding: 0.5em !default;

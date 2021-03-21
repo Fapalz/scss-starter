@@ -4,12 +4,12 @@ $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (
-    "align": (
+    'align': (
       property: vertical-align,
       class: align,
       values: baseline top middle bottom text-bottom text-top,
     ),
-    "float": (
+    'float': (
       responsive: true,
       property: float,
       values: (
@@ -18,11 +18,11 @@ $utilities: map-merge(
         none: none,
       ),
     ),
-    "overflow": (
+    'overflow': (
       property: overflow,
       values: auto hidden visible scroll,
     ),
-    "display": (
+    'display': (
       responsive: true,
       print: true,
       property: display,
@@ -30,7 +30,7 @@ $utilities: map-merge(
       values: inline inline-block block grid table table-row table-cell flex
         inline-flex none,
     ),
-    "shadow": (
+    'shadow': (
       property: box-shadow,
       class: shadow,
       values: (
@@ -40,29 +40,29 @@ $utilities: map-merge(
         none: none,
       ),
     ),
-    "position": (
+    'position': (
       property: position,
       values: static relative absolute fixed sticky,
     ),
-    "top": (
+    'top': (
       property: top,
       values: $position-values,
     ),
-    "bottom": (
+    'bottom': (
       property: bottom,
       values: $position-values,
     ),
-    "start": (
+    'start': (
       property: left,
       class: start,
       values: $position-values,
     ),
-    "end": (
+    'end': (
       property: right,
       class: end,
       values: $position-values,
     ),
-    "translate-middle": (
+    'translate-middle': (
       property: transform,
       class: translate-middle,
       values: (
@@ -71,21 +71,21 @@ $utilities: map-merge(
         y: translateY(-50%),
       ),
     ),
-    "border": (
+    'border': (
       property: border,
       values: (
         null: $border-width solid $border-color,
         0: 0,
       ),
     ),
-    "border-top": (
+    'border-top': (
       property: border-top,
       values: (
         null: $border-width solid $border-color,
         0: 0,
       ),
     ),
-    "border-end": (
+    'border-end': (
       property: border-right,
       class: border-end,
       values: (
@@ -93,14 +93,14 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-bottom": (
+    'border-bottom': (
       property: border-bottom,
       values: (
         null: $border-width solid $border-color,
         0: 0,
       ),
     ),
-    "border-start": (
+    'border-start': (
       property: border-left,
       class: border-start,
       values: (
@@ -108,24 +108,24 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-color": (
+    'border-color': (
       property: border-color,
       class: border,
       values:
         map-merge(
           $theme-colors,
           (
-            "white": $white,
+            'white': $white,
           )
         ),
     ),
-    "border-width": (
+    'border-width': (
       property: border-width,
       class: border,
       values: $border-widths,
     ),
     // Sizing utilities
-    "width":
+    'width':
       (
         property: width,
         class: w,
@@ -137,28 +137,28 @@ $utilities: map-merge(
           auto: auto,
         ),
       ),
-    "max-width": (
+    'max-width': (
       property: max-width,
       class: mw,
       values: (
         100: 100%,
       ),
     ),
-    "viewport-width": (
+    'viewport-width': (
       property: width,
       class: vw,
       values: (
         100: 100vw,
       ),
     ),
-    "min-viewport-width": (
+    'min-viewport-width': (
       property: min-width,
       class: min-vw,
       values: (
         100: 100vw,
       ),
     ),
-    "height": (
+    'height': (
       property: height,
       class: h,
       values: (
@@ -169,28 +169,28 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
-    "max-height": (
+    'max-height': (
       property: max-height,
       class: mh,
       values: (
         100: 100%,
       ),
     ),
-    "min-height": (
+    'min-height': (
       property: min-height,
       class: minh,
       values: (
         100: 100%,
       ),
     ),
-    "viewport-height": (
+    'viewport-height': (
       property: height,
       class: vh,
       values: (
         100: 100vh,
       ),
     ),
-    "min-viewport-height": (
+    'min-viewport-height': (
       property: min-height,
       class: min-vh,
       values: (
@@ -198,7 +198,7 @@ $utilities: map-merge(
       ),
     ),
     // Flex utilities
-    "flex":
+    'flex':
       (
         responsive: true,
         property: flex,
@@ -206,13 +206,13 @@ $utilities: map-merge(
           fill: 1 1 auto,
         ),
       ),
-    "flex-direction": (
+    'flex-direction': (
       responsive: true,
       property: flex-direction,
       class: flex,
       values: row column row-reverse column-reverse,
     ),
-    "flex-grow": (
+    'flex-grow': (
       responsive: true,
       property: flex-grow,
       class: flex,
@@ -221,7 +221,7 @@ $utilities: map-merge(
         grow-1: 1,
       ),
     ),
-    "flex-shrink": (
+    'flex-shrink': (
       responsive: true,
       property: flex-shrink,
       class: flex,
@@ -230,19 +230,19 @@ $utilities: map-merge(
         shrink-1: 1,
       ),
     ),
-    "flex-wrap": (
+    'flex-wrap': (
       responsive: true,
       property: flex-wrap,
       class: flex,
       values: wrap nowrap wrap-reverse,
     ),
-    "gap": (
+    'gap': (
       responsive: true,
       property: gap,
       class: gap,
       values: $spacers,
     ),
-    "justify-content": (
+    'justify-content': (
       responsive: true,
       property: justify-content,
       values: (
@@ -254,7 +254,7 @@ $utilities: map-merge(
         evenly: space-evenly,
       ),
     ),
-    "align-items": (
+    'align-items': (
       responsive: true,
       property: align-items,
       values: (
@@ -265,7 +265,7 @@ $utilities: map-merge(
         stretch: stretch,
       ),
     ),
-    "align-content": (
+    'align-content': (
       responsive: true,
       property: align-content,
       values: (
@@ -277,7 +277,7 @@ $utilities: map-merge(
         stretch: stretch,
       ),
     ),
-    "align-self": (
+    'align-self': (
       responsive: true,
       property: align-self,
       values: (
@@ -289,7 +289,7 @@ $utilities: map-merge(
         stretch: stretch,
       ),
     ),
-    "order": (
+    'order': (
       responsive: true,
       property: order,
       values: (
@@ -304,7 +304,7 @@ $utilities: map-merge(
       ),
     ),
     // Margin utilities
-    "margin":
+    'margin':
       (
         responsive: true,
         property: margin,
@@ -317,7 +317,7 @@ $utilities: map-merge(
             )
           ),
       ),
-    "margin-x": (
+    'margin-x': (
       responsive: true,
       property: margin-right margin-left,
       class: mx,
@@ -329,7 +329,7 @@ $utilities: map-merge(
           )
         ),
     ),
-    "margin-y": (
+    'margin-y': (
       responsive: true,
       property: margin-top margin-bottom,
       class: my,
@@ -341,7 +341,7 @@ $utilities: map-merge(
           )
         ),
     ),
-    "margin-top": (
+    'margin-top': (
       responsive: true,
       property: margin-top,
       class: mt,
@@ -353,7 +353,7 @@ $utilities: map-merge(
           )
         ),
     ),
-    "margin-end": (
+    'margin-end': (
       responsive: true,
       property: margin-right,
       class: me,
@@ -365,7 +365,7 @@ $utilities: map-merge(
           )
         ),
     ),
-    "margin-bottom": (
+    'margin-bottom': (
       responsive: true,
       property: margin-bottom,
       class: mb,
@@ -377,7 +377,7 @@ $utilities: map-merge(
           )
         ),
     ),
-    "margin-start": (
+    'margin-start': (
       responsive: true,
       property: margin-left,
       class: ms,
@@ -390,107 +390,107 @@ $utilities: map-merge(
         ),
     ),
     // Negative margin utilities
-    "negative-margin":
+    'negative-margin':
       (
         responsive: true,
         property: margin,
         class: m,
         values: $negative-spacers,
       ),
-    "negative-margin-x": (
+    'negative-margin-x': (
       responsive: true,
       property: margin-right margin-left,
       class: mx,
       values: $negative-spacers,
     ),
-    "negative-margin-y": (
+    'negative-margin-y': (
       responsive: true,
       property: margin-top margin-bottom,
       class: my,
       values: $negative-spacers,
     ),
-    "negative-margin-top": (
+    'negative-margin-top': (
       responsive: true,
       property: margin-top,
       class: mt,
       values: $negative-spacers,
     ),
-    "negative-margin-end": (
+    'negative-margin-end': (
       responsive: true,
       property: margin-right,
       class: me,
       values: $negative-spacers,
     ),
-    "negative-margin-bottom": (
+    'negative-margin-bottom': (
       responsive: true,
       property: margin-bottom,
       class: mb,
       values: $negative-spacers,
     ),
-    "negative-margin-start": (
+    'negative-margin-start': (
       responsive: true,
       property: margin-left,
       class: ms,
       values: $negative-spacers,
     ),
     // Padding utilities
-    "padding":
+    'padding':
       (
         responsive: true,
         property: padding,
         class: p,
         values: $spacers,
       ),
-    "padding-x": (
+    'padding-x': (
       responsive: true,
       property: padding-right padding-left,
       class: px,
       values: $spacers,
     ),
-    "padding-y": (
+    'padding-y': (
       responsive: true,
       property: padding-top padding-bottom,
       class: py,
       values: $spacers,
     ),
-    "padding-top": (
+    'padding-top': (
       responsive: true,
       property: padding-top,
       class: pt,
       values: $spacers,
     ),
-    "padding-end": (
+    'padding-end': (
       responsive: true,
       property: padding-right,
       class: pe,
       values: $spacers,
     ),
-    "padding-bottom": (
+    'padding-bottom': (
       responsive: true,
       property: padding-bottom,
       class: pb,
       values: $spacers,
     ),
-    "padding-start": (
+    'padding-start': (
       responsive: true,
       property: padding-left,
       class: ps,
       values: $spacers,
     ),
     // Text
-    "font-size":
+    'font-size':
       (
         rfs: true,
         property: font-size,
         class: fs,
         values: $font-sizes,
       ),
-    "font-style": (
+    'font-style': (
       property: font-style,
       class: fst,
       values: italic normal,
     ),
-    "font-weight": (
+    'font-weight': (
       property: font-weight,
       class: fw,
       values: (
@@ -501,12 +501,12 @@ $utilities: map-merge(
         bolder: $font-weight-bolder,
       ),
     ),
-    "text-transform": (
+    'text-transform': (
       property: text-transform,
       class: text,
       values: lowercase uppercase capitalize,
     ),
-    "text-align": (
+    'text-align': (
       responsive: true,
       property: text-align,
       class: text,
@@ -516,23 +516,23 @@ $utilities: map-merge(
         center: center,
       ),
     ),
-    "color": (
+    'color': (
       property: color,
       class: text,
       values:
         map-merge(
           $theme-colors,
           (
-            "white": $white,
-            "body": $body-color,
-            "muted": $text-muted,
-            "black-50": rgba($black, 0.5),
-            "white-50": rgba($white, 0.5),
-            "reset": inherit,
+            'white': $white,
+            'body': $body-color,
+            'muted': $text-muted,
+            'black-50': rgba($black, 0.5),
+            'white-50': rgba($white, 0.5),
+            'reset': inherit,
           )
         ),
     ),
-    "line-height": (
+    'line-height': (
       property: line-height,
       class: lh,
       values: (
@@ -542,27 +542,27 @@ $utilities: map-merge(
         lg: $line-height-lg,
       ),
     ),
-    "background-color": (
+    'background-color': (
       property: background-color,
       class: bg,
       values:
         map-merge(
           $theme-colors,
           (
-            "body": $body-bg,
-            "white": $white,
-            "transparent": transparent,
+            'body': $body-bg,
+            'white': $white,
+            'transparent': transparent,
           )
         ),
     ),
-    "gradient": (
+    'gradient': (
       property: background-image,
       class: bg,
       values: (
         gradient: var(--#{$variable-prefix}gradient),
       ),
     ),
-    "white-space": (
+    'white-space': (
       property: white-space,
       class: text,
       values: (
@@ -570,11 +570,11 @@ $utilities: map-merge(
         nowrap: nowrap,
       ),
     ),
-    "text-decoration": (
+    'text-decoration': (
       property: text-decoration,
       values: none underline line-through,
     ),
-    "word-wrap": (
+    'word-wrap': (
       property: word-wrap word-break,
       class: text,
       values: (
@@ -582,23 +582,23 @@ $utilities: map-merge(
       ),
       rtl: false,
     ),
-    "font-family": (
+    'font-family': (
       property: font-family,
       class: font,
       values: (
         monospace: var(--#{$variable-prefix}font-monospace),
       ),
     ),
-    "user-select": (
+    'user-select': (
       property: user-select,
       values: all auto none,
     ),
-    "pointer-events": (
+    'pointer-events': (
       property: pointer-events,
       class: pe,
       values: none auto,
     ),
-    "rounded": (
+    'rounded': (
       property: border-radius,
       class: rounded,
       values: (
@@ -611,35 +611,35 @@ $utilities: map-merge(
         pill: $border-radius-pill,
       ),
     ),
-    "rounded-top": (
+    'rounded-top': (
       property: border-top-left-radius border-top-right-radius,
       class: rounded-top,
       values: (
         null: $border-radius,
       ),
     ),
-    "rounded-end": (
+    'rounded-end': (
       property: border-top-right-radius border-bottom-right-radius,
       class: rounded-end,
       values: (
         null: $border-radius,
       ),
     ),
-    "rounded-bottom": (
+    'rounded-bottom': (
       property: border-bottom-right-radius border-bottom-left-radius,
       class: rounded-bottom,
       values: (
         null: $border-radius,
       ),
     ),
-    "rounded-start": (
+    'rounded-start': (
       property: border-bottom-left-radius border-top-left-radius,
       class: rounded-start,
       values: (
         null: $border-radius,
       ),
     ),
-    "visibility": (
+    'visibility': (
       property: visibility,
       class: null,
       values: (
@@ -684,7 +684,7 @@ $utilities: map-merge(
     bottom: 0;
     left: 0;
     z-index: $stretched-link-z-index;
-    content: "";
+    content: '';
   }
 }
 
@@ -697,7 +697,7 @@ $utilities: map-merge(
   &::before {
     display: block;
     padding-top: var(--aspect-ratio);
-    content: "";
+    content: '';
   }
 
   > * {
@@ -774,44 +774,6 @@ $utilities: map-merge(
       }
     }
   }
-}
-
-%heading {
-  font-family: $headings-font-family;
-  font-style: $headings-font-style;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  color: $headings-color;
-}
-
-.#{$utilities-prefix}h1 {
-  @extend %heading;
-  @include font-size($h1-font-size);
-}
-
-.#{$utilities-prefix}h2 {
-  @extend %heading;
-  @include font-size($h2-font-size);
-}
-
-.#{$utilities-prefix}h3 {
-  @extend %heading;
-  @include font-size($h3-font-size);
-}
-
-.#{$utilities-prefix}h4 {
-  @extend %heading;
-  @include font-size($h4-font-size);
-}
-
-.#{$utilities-prefix}h5 {
-  @extend %heading;
-  @include font-size($h5-font-size);
-}
-
-.#{$utilities-prefix}h6 {
-  @extend %heading;
-  @include font-size($h6-font-size);
 }
 
 .#{$utilities-prefix}lead {

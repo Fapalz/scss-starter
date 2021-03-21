@@ -1,8 +1,7 @@
 {
   "name": "@fapalz/scss-starter",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Simple scss starter",
-  "private": true,
   "scripts": {
     "build": "sass scss/main.scss css/main.css --no-source-map"
   },
@@ -19,7 +18,7 @@
     "web",
     "libary"
   ],
-  "author": "Gladikov Kirill - Fapalz <blacsesmot@gmail.com>",
+  "author": "Gladikov Kirill - Fapalz <blacesmot@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Fapalz/scss-starter/issues"
@@ -45,5 +44,6 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.19.0"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,5 +1,4 @@
-// stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
-
+// stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix, no-descending-specificity
 
 // Reboot
 //
@@ -7,7 +6,6 @@
 // styles targeting irrelevant browsers while applying new styles.
 //
 // Normalize is licensed MIT. https://github.com/necolas/normalize.css
-
 
 // Document
 //
@@ -18,12 +16,6 @@
 *::after {
   box-sizing: inherit;
 }
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, main, form legend {
-  display: block;
-}
-
 
 // Root
 //
@@ -40,151 +32,224 @@ footer, header, hgroup, menu, nav, section, main, form legend {
   }
 }
 
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
 
 html {
   box-sizing: border-box;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+/**
+ * Remove the margin in all browsers.
+ */
 
-// Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
-// on elements that programmatically receive focus but wouldn't normally show a visible
-// focus outline. In general, this would mean that the outline is only applied if the
-// interaction that led to the element receiving programmatic focus was a keyboard interaction,
-// or the browser has somehow determined that the user is primarily a keyboard user and/or
-// wants focus outlines to always be presented.
-// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
-// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+body {
+  margin: 0;
+}
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+/**
+ * Render elements consistently in IE.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+  Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
+  on elements that programmatically receive focus but wouldn't normally show a visible
+  focus outline. In general, this would mean that the outline is only applied if the
+  interaction that led to the element receiving programmatic focus was a keyboard interaction,
+  or the browser has somehow determined that the user is primarily a keyboard user and/or
+  wants focus outlines to always be presented.
+  See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+  and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+*/
+
+[tabindex='-1']:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ * 3. Add explicit cursor to indicate changed behavior.
+ * 4. Prevent the text-decoration to be skipped.
+ */
 
-
-// Abbreviations
-//
-// 1. Duplicate behavior to the data-bs-* attribute for our tooltip plugin
-// 2. Add the correct text decoration in Chrome, Edge, Opera, and Safari.
-// 3. Add explicit cursor to indicate changed behavior.
-// 4. Prevent the text-decoration to be skipped.
-
-abbr[title],
-abbr[data-bs-original-title] { // 1
-  text-decoration: underline; // 2
-  text-decoration: underline dotted; // 2
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
   cursor: help; // 3
   text-decoration-skip-ink: none; // 4
 }
 
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
 
-// Address
-
-address {
-  font-style: normal;
-  line-height: inherit;
+b,
+strong {
+  font-weight: bolder;
 }
 
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 
-
-// Figures
-//
-// Apply a consistent margin strategy (matches our type styles).
-
-figure {
-  margin: 0 0 1rem;
+code,
+kbd,
+samp {
+  font-family: monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
+/**
+ * Add the correct font size in all browsers.
+ */
 
-// Images and content
-
-img,
-svg {
-  vertical-align: middle;
+small {
+  font-size: 80%;
 }
 
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
 
-// Tables
-//
-// Prevent double borders
-
-table {
-  caption-side: bottom;
-  border-collapse: collapse;
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
-caption {
-  text-align: left;
+sub {
+  bottom: -0.25em;
 }
 
-// 1. Matches default `<td>` alignment by inheriting `text-align`.
-// 2. Fix alignment for Safari
-
-th {
-  text-align: inherit; // 1
-  text-align: -webkit-match-parent; // 2
+sup {
+  top: -0.5em;
 }
 
-thead,
-tbody,
-tfoot,
-tr,
-td,
-th {
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
 }
 
+/* Forms
+   ========================================================================== */
 
-// Forms
-//
-// 1. Allow labels to use `margin` for spacing.
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
 
-label {
-  display: inline-block; // 1
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: inherit; /* 1 */
+  margin: 0; /* 2 */
 }
 
-// Remove the default `border-radius` that macOS Chrome adds.
-// See https://github.com/twbs/bootstrap/issues/24093
+/*
+  Remove the default `border-radius` that macOS Chrome adds.
+  See https://github.com/twbs/bootstrap/issues/24093
+ */
 
 button {
-  // stylelint-disable-next-line property-disallowed-list
   border-radius: 0;
 }
 
-// Work around a Firefox bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-// Credit https://github.com/suitcss/base/
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
 
-button:focus {
-  outline: dotted 1px;
-  outline: -webkit-focus-ring-color auto 5px;
-}
-
-// 1. Remove the margin in Firefox and Safari
-
-input,
 button,
-select,
-optgroup,
-textarea {
-  margin: 0; // 1
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+input {
+  overflow: visible; /* 1 */
 }
 
-// Remove the inheritance of text transform in Firefox
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
 
 button,
 select {
+  /* 1 */
   text-transform: none;
 }
 
 // Set the cursor for non-`<button>` buttons
-//
 // Details at https://github.com/twbs/bootstrap/pull/30562
-[role="button"] {
+
+[role='button'] {
   cursor: pointer;
 }
 
@@ -193,13 +258,6 @@ select {
 
 select {
   word-wrap: normal;
-}
-
-// Remove the dropdown arrow in Chrome from inputs built with datalists.
-// See https://stackoverflow.com/a/54997118
-
-[list]::-webkit-calendar-picker-indicator {
-  display: none;
 }
 
 // 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
@@ -222,45 +280,68 @@ button,
 
 // Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
 
-::-moz-focus-inner {
-  padding: 0;
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
-}
-
-// 1. Textareas should really only resize vertically so they don't break their (horizontal) containers.
-
-textarea {
-  resize: vertical; // 1
-}
-
-// 1. Browsers set a default `min-width: min-content;` on fieldsets,
-//    unlike e.g. `<div>`s, which have `min-width: 0;` by default.
-//    So we reset that to ensure fieldsets behave more like a standard block element.
-//    See https://github.com/twbs/bootstrap/issues/12359
-//    and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
-// 2. Reset the default outline behavior of fieldsets so they don't affect page layout.
-
-fieldset {
-  min-width: 0; // 1
-  padding: 0; // 2
-  margin: 0; // 2
-  border: 0; // 2
-}
-
-// 1. By using `float: left`, the legend will behave like a block element.
-//    This way the border of a fieldset wraps around the legend if present.
-// 2. Fix wrapping bug.
-//    See https://github.com/twbs/bootstrap/issues/29712
-
-legend {
-  float: left; // 1
-  width: 100%;
   padding: 0;
-  line-height: inherit;
+}
 
-  + * {
-    clear: left; // 2
-  }
+/*
+  Work around a Firefox bug where the transparent `button` background
+  results in a loss of the default `button` focus styles.
+  Credit https://github.com/suitcss/base/
+ */
+
+button:focus {
+  outline: dotted 1px;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Remove the dropdown arrow in Chrome from inputs built with datalists.
+// See https://stackoverflow.com/a/54997118
+
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
 }
 
 // Fix height of inputs with a type of datetime-local, date, month, week, or time
@@ -276,47 +357,11 @@ legend {
   padding: 0;
 }
 
-::-webkit-inner-spin-button {
-  height: auto;
-}
-
-// 1. Correct the outline style in Safari.
-// 2. This overrides the extra rounded corners on search inputs in iOS so that our
-//    `.form-control` class can properly style them. Note that this cannot simply
-//    be added to `.form-control` as it's not specific enough. For details, see
-//    https://github.com/twbs/bootstrap/issues/11586.
-
-[type="search"] {
-  outline-offset: -2px; // 1
-  -webkit-appearance: textfield; // 2
-}
-
-// 1. A few input types should stay LTR
-// See https://rtlstyling.com/posts/rtl-styling#form-inputs
-// 2. RTL only output
-// See https://rtlcss.com/learn/usage-guide/control-directives/#raw
-
-/* rtl:raw:
-[type="tel"],
-[type="url"],
-[type="email"],
-[type="number"] {
-  direction: ltr;
-}
-*/
-
-// Remove the inner padding in Chrome and Safari on macOS.
-
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 // Remove padding around color pickers in webkit browsers
 
 ::-webkit-color-swatch-wrapper {
   padding: 0;
 }
-
 
 // Inherit font family and line height for file input buttons
 
@@ -333,41 +378,96 @@ legend {
   -webkit-appearance: button; // 2
 }
 
-// Correct element displays
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
 
-output {
-  display: inline-block;
+textarea {
+  overflow: auto;
 }
 
-// Remove border from iframe
+/**
+ * Correct the padding in Firefox.
+ */
 
-iframe {
-  border: 0;
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
 }
 
-// Summary
-//
-// 1. Add the correct display in all browsers
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
 
-summary {
-  display: list-item; // 1
-  cursor: pointer;
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
-
-// Progress
-//
-// Add the correct vertical alignment in Chrome, Firefox, and Opera.
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
 
 progress {
   vertical-align: baseline;
 }
 
+/* Interactive
+   ========================================================================== */
 
-// Hidden attribute
-//
-// Always hide an element with the `hidden` HTML attribute.
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Correct element displays
+ */
+output {
+  display: inline-block;
+}
+
+/**
+ * Remove border from iframe
+ */
+
+iframe {
+  border: 0;
+}
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
 
 [hidden] {
-  display: none !important;
+  display: none;
 }
